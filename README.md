@@ -1,4 +1,5 @@
 * **Project Title:** Strong Password Detection Tool.
+* 
 **Table of Contents**:
  *    * Abstract
  *    * Introduction & Problem Statement
@@ -9,6 +10,7 @@
  *    * Prototype Results & Output
  *    * Conclusion & Future Work
  *    * Modules Used
+      * 
 **1. Abstract**
 Strong Password Detection Project Abstract:
 In an increasingly digital world, the security of personal and organizational data hinges
@@ -67,8 +69,10 @@ password validation, it addresses a pervasive weakness in contemporary cybersecu
 ability to enforce strong password policies, provide actionable feedback, and integrate
 seamlessly into various applications makes it an indispensable tool for enhancing the
 security landscape for individuals and organizations alike. This project not only aims to identify weak passwords but, more importantly, to foster a proactive approach to password security, ultimately contributing to a safer and more resilient digital environment.
+
 **2. Introduction & Problem Statement**
 Weak passwords represent a critical vulnerability in digital security, frequently exploited by attackers through brute-force or dictionary methods. This project addresses this pervasive issue by developing a Python-based "Strong Password Detection" tool. The tool aims to enforce robust password policies, ensuring users create passwords that are resilient against common attack vectors and thereby enhancing overall data security for individuals and organizations.
+
 **3. Evaluation Criteria**
 The "Strong Password Detection" tool evaluates password strength based on the following industry-standard criteria:
  * Minimum Length: The password must be at least 8 characters long to ensure sufficient entropy.
@@ -78,6 +82,7 @@ The "Strong Password Detection" tool evaluates password strength based on the fo
    * At least one digit (0-9).
    * At least one special character (e.g., !@#$%^&*()_+-=[]{}|;:'",.<>/?).
      This combination significantly increases password complexity, making it harder to guess or crack.
+     
 **4. Algorithm** (Step-by-Step)
 The core algorithm for password strength validation proceeds as follows:
  * Input: The system receives a string representing the password from the user.
@@ -91,6 +96,7 @@ The core algorithm for password strength validation proceeds as follows:
    * If all five conditions are satisfied, the password is classified as "Strong Password."
    * Else (if one or more conditions are not met), the password is classified as "Weak Password."
  * Feedback Mechanism: For weak passwords, the algorithm generates a specific list of missing criteria (e.g., "Missing uppercase letter", "Too short"), providing actionable feedback to the user to guide them in creating a stronger password.
+ * 
 **5. Dataset**
 For the evaluation and testing of the "Strong Password Detection" algorithm, a diverse set of synthetic password examples was utilized. This dataset avoids using real user passwords to uphold privacy and security standards. Instead, it comprises strings meticulously designed to cover various validation scenarios, ensuring robust testing of the algorithm's accuracy and feedback mechanism. The dataset includes:
  * Strong Passwords: Examples that fully satisfy all defined criteria. These serve as positive test cases.
@@ -118,6 +124,7 @@ For the evaluation and testing of the "Strong Password Detection" algorithm, a d
  * Edge Cases: Passwords specifically designed to test boundary conditions, such as those exactly 8 characters long or those barely meeting all requirements.
    * Example: Ab1!cdEf
    * Example: A1b!C2d#
+   * 
 **6. Source Code**
 The core logic of the password strength checker is implemented in Python, leveraging the re module for regular expression-based pattern matching.
 import re
@@ -253,6 +260,7 @@ Do you want to check a (s)ingle password or (m)ultiple passwords from a list? (s
 'weak' -> Weak Password: Minimum 8 characters, At least one uppercase letter, At least one digit, At least one special character (!@#$%^&*)
 'test1' -> Weak Password: Minimum 8 characters, At least one uppercase letter, At least one special character (!@#$%^&*)
 'Ab1!cdEf' -> Strong Password
+
 **8. Conclusion & Future Work**
 Conclusion:
 The "Strong Password Detection" project successfully implements a Python-based tool capable of evaluating password strength against industry-standard security criteria. The algorithm effectively identifies weak passwords and provides clear, actionable feedback, guiding users towards creating more secure credentials. The modular design, utilizing regular expressions and standard Python libraries, ensures both robustness and ease of maintenance. This tool serves as a foundational component for enhancing digital security in various applications, from user authentication systems to cybersecurity auditing.
@@ -264,6 +272,7 @@ Potential enhancements for future development include:
  * GUI Development: Create a more user-friendly graphical interface using libraries like Tkinter, PyQt, or web frameworks like Flask for broader accessibility.
  * API Integration: Develop a simple API endpoint to allow other applications to easily integrate password validation.
  * Real-time Feedback: Provide character-by-character feedback as the user types their password.
+ * 
 **9. Modules Used**
 The project primarily utilizes the following standard Python modules:
  * re: For regular expression operations, critical for pattern matching in password validation.
